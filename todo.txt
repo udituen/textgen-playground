@@ -1,0 +1,10 @@
+
+Stacks being used:
+FastAPI
+Docker
+Streamlit
+
+Steps:
+generate docker compose file and include the fastAPI and streamlit containers, with their different dockerfiles
+
+- set up 

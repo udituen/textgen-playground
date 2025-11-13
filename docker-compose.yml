@@ -1,0 +1,13 @@
+services:
+  fastapi:
+    build: app/docker
+    ports:
+      -"8080:80"
+    volumes:
+      - ""
+  
+  streamlit:
+    build: .streamlit/docker
+    context: .
+    ports:
+      -"8080:80"
