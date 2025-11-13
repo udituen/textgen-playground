@@ -12,7 +12,7 @@ ______________________________________________________
 _____________________________________________________
 
 ### Project Folder Structure
-
+`
 project-root/
 │
 ├── app/
@@ -36,7 +36,7 @@ project-root/
 │   └── config.toml         # Streamlit configuration
 │
 └── README.md
-
+`
 
 _________________________________________________________________________
 
@@ -45,3 +45,7 @@ _________________________________________________________________________
 - https://github.com/docker/compose?tab=readme-ov-file
 - https://docs.streamlit.io/deploy/tutorials/docker
 
+#### Some useful commanda
+`
+conda env export > environment.yml
+`
