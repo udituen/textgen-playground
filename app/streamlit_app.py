@@ -10,7 +10,7 @@ API_BASE_URL = "http://localhost:8000/api/v1"
 # Page config
 st.set_page_config(
     page_title="Text Generator",
-    page_icon="🤖",
+    page_icon="",
     layout="wide"
 )
 
@@ -152,7 +152,7 @@ with col1:
     
     # Generate button
     generate_button = st.button(
-        "🚀 Generate",
+        "Generate",
         type="primary",
         use_container_width=True
     )
@@ -208,28 +208,28 @@ if generate_button:
                         )
                         
                         # Show metadata
-                        with st.expander("📊 Generation Details"):
+                        with st.expander("Generation Details"):
                             st.json({
                                 "model": result["model_name"],
                                 "strategy": result["strategy"],
                                 "temperature": result["temperature"],
                             })
                     
-                    st.success("✅ Generation complete!")
+                    st.success("Generation complete!")
                     
                 else:
                     error_detail = response.json().get("detail", "Unknown error")
-                    st.error(f"❌ Error: {error_detail}")
+                    st.error(f"Error: {error_detail}")
                     
             except requests.exceptions.Timeout:
                 st.error("⏱️ Request timed out. The model might be taking too long to generate.")
             except requests.exceptions.ConnectionError:
                 st.error("🔌 Cannot connect to API. Make sure FastAPI server is running.")
             except Exception as e:
-                st.error(f"❌ An error occurred: {str(e)}")
+                st.error(f"An error occurred: {str(e)}")
 
 # Display current session info
-with st.expander("ℹ️ About"):
+with st.expander("ℹ About"):
     st.markdown("""
     ### Text Generator API
     
